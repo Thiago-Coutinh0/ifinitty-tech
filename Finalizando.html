@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finalizar Compra</title>
+    <link rel="stylesheet" href="finalizando.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -78,13 +79,7 @@
             <input type="text" class="form-input" id="house-number" placeholder="Número da Casa" required>
             <input type="text" class="form-input" id="city" placeholder="Cidade" required>
 
-            <!-- Alteração para select de CEP -->
-            <select class="form-input" id="cep" onchange="addDeliveryFee()" required>
-                <option value="">Selecione o CEP</option>
-                <option value="64750-000">64750-000</option>
-                <option value="64755-000">64755-000</option>
-            </select>
-            <small style="color: red;">* Entregamos apenas para os CEPs 64750-000 e 64755-000.</small>
+            <input type="text" class="form-input" id="cep" placeholder="CEP (ex: 64750-000)" oninput="maskCep(this); addDeliveryFee()" maxlength="9" required>
 
             <input type="text" class="form-input" id="reference" placeholder="Ponto de Referência" required>
             <input type="email" class="form-input" id="email" placeholder="Email" required>
@@ -146,20 +141,40 @@
         }
 
         function addDeliveryFee() {
-            const cep = document.getElementById("cep").value;
+            const cep = document.getElementById("cep").value.trim();
             const deliveryInfo = document.getElementById("delivery-info");
 
-            // Verifica se o CEP selecionado é válido
-            if (cep === "64750-000" || cep === "64755-000") {
-                deliveryFee = 0.00;  // Taxa de entrega para esses CEPs
-                deliveryInfo.innerHTML = "Taxa de entrega: R$ 3,00 (região atendida)";
-            } else {
+            if (!cep || cep.length !== 9) 
+                {
                 deliveryFee = 0;
-                deliveryInfo.innerHTML = "⚠️ Selecione um CEP válido (64750-000 ou 64755-000).";
+                deliveryInfo.innerHTML = "Digite um CEP válido.";
+                displayCart();
+                enableSubmitButton();
+                return;
+            }
+
+            if (cep === "64750-000" || cep === "64755-000") {
+                deliveryFee = 0;
+                deliveryInfo.innerHTML = "Frete grátis para este CEP!";
+            } else if (cep.startsWith("64")) {
+                deliveryFee = 5.00;
+                deliveryInfo.innerHTML = "Frete: R$ 5,00 (entrega para o Piauí).";
+            } else {
+                deliveryFee = 10.00;
+                deliveryInfo.innerHTML = "Frete: R$ 10,00 (outras regiões).";
             }
 
             displayCart();
             enableSubmitButton();
+        }
+
+        function maskCep(input) {
+            let value = input.value.replace(/\D/g, ''); // Remove tudo que não for dígito
+            if (value.length > 5) {
+                input.value = value.slice(0, 5) + '-' + value.slice(5, 8);
+            } else {
+                input.value = value;
+            }
         }
 
         function enableSubmitButton() {

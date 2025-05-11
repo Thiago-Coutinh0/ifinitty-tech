@@ -42,30 +42,31 @@
     </div>
 
         <div class="container" id="products">
-                <div class="product" data-name="Mouse sem fio">
-                    <h3>Mouse S/fio com led</h3>
-                    <img src="MouseSfio.webp" alt="Mouse sem fio" style="width: 45%;">
-                    <br>
-                    <br>
-
-                    <h4>Com design moderno e iluminação RGB, esse mouse une praticidade e estilo. Ideal para trabalho, estudos ou uso casual.</h4>
-                    <p> • Iluminação: LED RGB com efeitos de luz </p>
-                    <p> • Recarregável: Bateria interna com carregamento via USB</p>
-                    <p> • Compatível com: Windows, Mac, Android (com adaptador OTG), etc.</p>
-                    <p> • Design Slim: Leve, silencioso e confortável para uso prolongado.</p>
-
-                    <h4>Obs: Somente na cor preta</h4>
-                    <h3>R$39,90</h3>
-
-                    
-                    <button onclick="addToCart('Mouse sem fio', 39.90)">Adicionar ao Carrinho</button>
+            <div class="product" data-name="Headphone">
+                <h3>Headphone Bluetooth</h3>
+                <img src="imagens/Hadfone.webp" alt="Headphone" style="width: 60%;">
+                <br>
+                <img src="imagens/headphoneB.webp" alt="Headphone" style="width: 60%;">
+                
+                <h4>Fone de ouvido Bluetooth Sem Fio Headphone Bluetooth Recarregável P9 Air Top Casual Esportivo</h4>
+                <p> • Bateria prolongada</p>
+                <p> • Atrativo</p>
+                <p> • Ótimo Volume</p>
+                <p> • Tempo de carregamento: Cerca de 2h</p>
+                <p> • Microfone embutido</p>
+                <h3>R$ 56,10</h3>
+    
+                <div class="options">
+                    <label for="color4">Cor:</label>
+                    <select id="color4">
+                        <option value="Preto">Preto</option>
+                        <option value="Branco">Branco</option>
+                    </select>
                 </div>
-        
-                
-                
-    
-        </div>
-    
+                <button onclick="addToCart('Headphone', 56.10, null, document.getElementById('color4').value)">Adicionar ao Carrinho</button>
+
+            </div>
+            </div>
 
         
             <script>
@@ -90,16 +91,15 @@
                     });
                 }
             </script>
-            </script>
-            <footer style="background-color: #001068; color: white; text-align: center; padding: 20px;">
-                <p>Siga-nos nas redes sociais:</p>
-                <a href="https://www.instagram.com/ifinitty_tech" target="_blank" style="margin: 0 10px;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" style="width: 32px; height: 32px;">
-                </a>
-                <a href="https://wa.me/558994338863" target="_blank" style="margin: 0 10px;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 32px; height: 32px;">
-                </a>
-                <p style="margin-top: 10px;">&copy; 2025 Ifinitty Tech</p>
-            </footer>
+                    <footer style="background-color: #001068; color: white; text-align: center; padding: 20px;">
+                        <p>Siga-nos nas redes sociais:</p>
+                        <a href="https://www.instagram.com/ifinitty_tech" target="_blank" style="margin: 0 10px;">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" style="width: 32px; height: 32px;">
+                        </a>
+                        <a href="https://wa.me/558994338863" target="_blank" style="margin: 0 10px;">
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 32px; height: 32px;">
+                        </a>
+                        <p style="margin-top: 10px;">&copy; 2025 Ifinitty Tech</p>
+                    </footer>
         </body>
         </html>

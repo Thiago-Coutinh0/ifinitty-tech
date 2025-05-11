@@ -1,0 +1,28 @@
+@media (max-width: 600px) {
+    .header {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .cart-item {
+        font-size: 15px;
+    }
+
+    .form-input {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .total {
+        font-size: 16px;
+    }
+}
