@@ -187,44 +187,47 @@ body {
             margin-top: 5px;
         }
         @media (max-width: 600px) {
-            .top-header {
-                padding: 10px;
-                height: auto;
-                margin-bottom: 20px;
-                align-items: center;
-                text-align: center;
-                gap: 83px;
+            
+            @media (max-width: 600px) {
+                .top-header {
+                    padding: 10px;
+                    height: auto;
+                    margin-bottom: 20px;
+                }
+
+                .navbar {
+                    position: static; /* remove o fixo pra caber no header */
+                    background-color: transparent;
+                    gap: 15px;
+                }
+
+                .navbar a {
+                    float: none;
+                    display: block;
+                    width: 100%;
+                    padding: 10px 0;
+                }
+
+                .site-title {
+                    font-size: 20px;
+                    margin: 5px 0;
+                }
+
+                .logo {
+                    height: 60px;
+                    margin: 5px 0;
+                }
+
+                .search-bar input {
+                    width: 90%;
+                }
+
+                
+                body {
+                    padding-top: 170px;
+                }
             }
-        
-            .navbar {
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                position: static;
-                background-color: transparent;
-            }
-        
-            .navbar a {
-                float: none;
-                display: block;
-                width: 100%;
-                padding: 10px 0;
-            }
-        
-            .site-title {
-                font-size: 20px;
-                margin: 5px 0;
-            }
-        
-            .logo {
-                height: 60px;
-                margin: 5px 0;
-            }
-        
-            .search-bar input {
-                width: 90%;
-            }
-        
+
             .product {
                 width: 90%;
             }
@@ -233,7 +236,7 @@ body {
                 padding-top: 170px;
             }
             .product {
-                width: 60%;
+                width: 70%;
                 margin: 20px auto;
                 padding: 10px;
                 box-shadow: 0 0 10px rgba(0,0,0,0.1);

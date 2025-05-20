@@ -79,9 +79,7 @@
             padding-top: 80px;
         }
         @media (max-width: 600px) {
-            .header {
-                font-size: 20px;
-            }
+            
             .cart-item {
                 flex-direction: column;
                 align-items: flex-start;
@@ -101,6 +99,42 @@
                 height: auto;
                 margin-bottom: 20px;
             }
+
+            .navbar {
+                position: static; /* remove o fixo pra caber no header */
+                background-color: transparent;
+                gap: 15px;
+            }
+
+            .navbar a {
+                float: none;
+                display: block;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .site-title {
+                font-size: 20px;
+                margin: 5px 0;
+            }
+
+            .logo {
+                height: 60px;
+                margin: 5px 0;
+            }
+
+            .search-bar input {
+                width: 90%;
+            }
+
+            .product {
+                width: 90%;
+            }
+            
+
+            body {
+                padding-top: 170px;
+            }
         }
         
     </style>
@@ -110,7 +144,7 @@
         <nav class="navbar">
             <a href="index.html">Início</a>
             <a href="Suporte.html">Suporte</a>
-            <a href="combo.html">Dia dos Namorados</a>
+            <a href="combo.html">Promoção</a>
         </nav>
         <h1 class="site-title">Ifinitty Tech</h1>
         <a href="index.html">
