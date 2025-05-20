@@ -10,11 +10,15 @@
 <body>
 
     <header class="top-header">
-        <nav class="navbar">
-            <a href="index.html">Início</a>
-            <a href="Suporte.html">Suporte</a>
-            <a href="combo.html">Dia dos namorados</a>
-        </nav>
+        <div class="navbar">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <div class="menu-links" id="menuLinks">
+                <a href="index.html">Início</a>
+                <a href="Manutenção.html">Suporte</a>
+                <a href="combos.html">Dia dos Namorados</a>
+            </div>
+            </div>
+
         <h1 class="site-title">Ifinitty Tech</h1>
         <a href="index.html">
             <img src="imagens/logo.jpg" alt="Logo Ifinitty Tech" class="logo">
@@ -348,6 +352,8 @@
         
             
     </div>
+    <br>
+    
 
         
 
@@ -390,5 +396,12 @@
             });
         }
     </script>
+    <script>
+  function toggleMenu() {
+    const menu = document.getElementById("menuLinks");
+    menu.classList.toggle("active");
+  }
+</script>
+
 </body>
 </html>
