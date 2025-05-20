@@ -10,15 +10,11 @@
 <body>
 
     <header class="top-header">
-        <div class="navbar">
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-            <div class="menu-links" id="menuLinks">
-                <a href="index.html">Início</a>
-                <a href="Manutenção.html">Suporte</a>
-                <a href="combos.html">Dia dos Namorados</a>
-            </div>
-            </div>
-
+        <nav class="navbar">
+            <a href="index.html">Início</a>
+            <a href="Suporte.html">Suporte</a>
+            <a href="combo.html">Promoção</a>
+        </nav>
         <h1 class="site-title">Ifinitty Tech</h1>
         <a href="index.html">
             <img src="imagens/logo.jpg" alt="Logo Ifinitty Tech" class="logo">
@@ -360,6 +356,31 @@
         
             
     </div>
+    <br>
+    <div class="container" id="products">
+        
+        <div class="product" data-name="Ursinho-25cm">
+            <h3>Ursinho de pelúcia</h3>
+            <a href="ursinho2.0.html">
+            <img src="imagens/Ursinho2.0.webp" alt="Ursinho-25cm" style="width: 73%;"></a>
+            <br>
+            <a href="ursinho2.0.html"> Ursinho de pelúcia - 25 cm</a>
+            <br>
+            <p>
+            
+            <span style="text-decoration: line-through; color: #777;">R$ 55,90</span>
+            <span style="color: #e60026; font-size: 18px; font-weight: bold;"> R$ 50,10</span>
+            </p>
+            <h3>R$ 50,10</h3>
+        
+            <button onclick="addToCart('Ursinho-25cm', 50.10)">Adicionar ao Carrinho</button>
+
+        </div>
+       
+        
+            
+    </div>
+    <br>
 
 
     <footer style="background-color: #001068; color: white; text-align: center; padding: 20px;">
@@ -396,12 +417,5 @@
             });
         }
     </script>
-    <script>
-  function toggleMenu() {
-    const menu = document.getElementById("menuLinks");
-    menu.classList.toggle("active");
-  }
-</script>
-
 </body>
 </html>

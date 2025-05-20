@@ -243,57 +243,5 @@ body {
         
            
         }
-.navbar {
-  background-color: #001068;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  color: white;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: white;
-}
-
-.menu-links {
-  display: flex;
-  gap: 20px;
-}
-
-.menu-links a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  font-weight: bold;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .menu-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .menu-links.active {
-    display: flex;
-  }
-
-  .menu-links a {
-    padding: 10px;
-    text-align: center;
-    background-color: #001068;
-    border-top: 1px solid #0030a3;
-  }
-}
 
         
