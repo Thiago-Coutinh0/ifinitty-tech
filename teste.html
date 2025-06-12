@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="teste.css">
     <title>Ifinitty Tech</title>
     
-    
+    <style>
+        .logo-top-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 60px; /* ajuste o tamanho conforme necessário */
+            height: auto;
+            z-index: 1000; /* garante que fique por cima de outros elementos */
+        }
+    </style>
 </head>
 <body>
-
-        <header class="top-header">
+    <header class="top-header">
         <nav class="navbar">
             <a href="index.html">Início</a>
             <a href="Suporte.html">Suporte</a>
@@ -20,11 +28,9 @@
         <a href="index.html">
             <img src="imagens/logo.jpg" alt="Logo Ifinitty Tech" class="logo">
         </a>
-        </header>
-    
+    </header>
     
 
-    
     <!-- Barra de busca -->
     <div class="search-bar">
         <input type="text" id="search" placeholder="Buscar produtos..." onkeyup="searchProducts()">

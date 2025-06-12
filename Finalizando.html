@@ -154,14 +154,14 @@
             }
 
             if (cep === "64750-000" || cep === "64755-000") {
-                deliveryFee = 0;
-                deliveryInfo.innerHTML = "Frete grátis para este CEP!";
+                deliveryFee = 2.00;
+                deliveryInfo.innerHTML = "Frete de R$ 2,00 para este CEP!";
             } else if (cep.startsWith("64")) {
-                deliveryFee = 5.00;
+                deliveryFee = 10.00;
                 deliveryInfo.innerHTML = "Frete: R$ 5,00 (entrega para o Piauí).";
             } else {
-                deliveryFee = 10.00;
-                deliveryInfo.innerHTML = "Frete: R$ 10,00 (outras regiões).";
+                deliveryFee = 25.00;
+                deliveryInfo.innerHTML = "Frete: R$ 25,00 (outras regiões).";
             }
 
             displayCart();
