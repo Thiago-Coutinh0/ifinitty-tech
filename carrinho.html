@@ -4,24 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="carrinho.css">
     <style>
-        .navbar {
-            background-color: #001068;
-            overflow: hidden;
-            position: fixed;
-        }
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+        
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -113,12 +99,21 @@
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html">Início</a>
-        <a href="Manutenção.html">Suporte</a>
-    </div>
-    <div class="header">Carrinho de Compras</div> 
-    
+    <header class="top-header">
+        <nav class="navbar">
+            <a href="index.html">Início</a>
+            <a href="Suporte.html">Suporte</a>
+        </nav>
+        <h1 class="site-title">Carrinho</h1>
+        <a href="index.html">
+            <img src="imagens/logo.jpg" alt="Logo Ifinitty Tech" class="logo">
+        </a>
+        </header> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="container" id="cart-items">
         <!-- Os itens do carrinho serão exibidos aqui -->
     </div>
